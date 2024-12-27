@@ -4,6 +4,7 @@ import { TypeOrmModule, TypeOrmModuleOptions } from '@nestjs/typeorm';
 import { DataSource } from 'typeorm';
 import { seedData } from './common/db/db-seeder';
 import { RecipeModule } from './recipe/recipe.module';
+import { AppController } from './app.controller';
 
 @Module({
   imports: [
@@ -28,7 +29,7 @@ import { RecipeModule } from './recipe/recipe.module';
 
     RecipeModule,
   ],
-  controllers: [],
+  controllers: [AppController],
   providers: [],
 })
 export class AppModule implements OnModuleInit {
